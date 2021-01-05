@@ -114,15 +114,9 @@ alias vag='vagrant'
 #Python
 alias py='python3'
 
-#Unison
-alias sync_pi='/home/leon/Programs/sync.sh'
-
 #pushd and popd
 alias pud='pushd'
 alias pod='popd'
-
-#Global Variables
-export RISCV=/opt/risc
 
 #Make dir and change into it
 function mkcd()
@@ -154,15 +148,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# M0 CrossCompiler
-PATH=$PATH:~/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin:~/Programs/CortexM0/gcc-arm-none-eabi-9-2020-q2-update/bin
-
-# PI Cross Compile
-export PATH=$PATH:/home/leon/Programs/pi_cross_compile/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin
-
-#Rust
-export PATH=$PATH:/home/leon/.cargo/bin
-
 #search for git repo in parent direcorys
 gogit (){
 	path=$(pwd)
@@ -174,11 +159,3 @@ gogit (){
 		echo "No git repo in parent directorys"
 	fi
 }
-
-#QEMU RISC-V
-#export RISCV=/opt/riscv/
-#export PATH=$RISCV/bin:$PATH
-#export KEYSTONE_SDK_DIR=/home/leon/playground/thesis/risc-v/keystone/sdk/build
-export RISCV=/home/leon/playground/thesis/risc-v/keystone/riscv
-export PATH=$RISCV/bin:$PATH
-export KEYSTONE_SDK_DIR=/home/leon/playground/thesis/risc-v/keystone/sdk
