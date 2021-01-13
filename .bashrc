@@ -118,6 +118,8 @@ alias py='python3'
 alias pud='pushd'
 alias pod='popd'
 
+#tmux
+alias tmux='tmux -2'
 #Make dir and change into it
 function mkcd()
 {
