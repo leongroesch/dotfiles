@@ -1,4 +1,6 @@
 set tabstop=2
+set shiftwidth=2
+set si
 set number
 nmap <F7> :tabp<CR>
 nmap <F8> :tabn<CR>
