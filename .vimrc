@@ -1,7 +1,7 @@
 set tabstop=2
 set shiftwidth=2
 set si
-set number
+set number relativenumber
 nmap <F7> :tabp<CR>
 nmap <F8> :tabn<CR>
 nmap <F6> :tabe
