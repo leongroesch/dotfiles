@@ -172,3 +172,9 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
 export EDITOR='vim'
+
+if [ -t 0 ]; then
+	if [ -z $TMUX ]; then
+		exec tmux
+	fi
+fi
