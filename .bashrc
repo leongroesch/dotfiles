@@ -174,7 +174,7 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 
 export EDITOR='vim'
 
-export THEME=~/dotfiles/repos/agnoster-bash/agnoster.bash
+export THEME=~/dotfiles/agnoster-bash/agnoster.bash
 if [[ -f $THEME ]]; then
     export DEFAULT_USER=`whoami`
     source $THEME
@@ -182,7 +182,7 @@ fi
 
 if [ -t 0 ]; then
 	if [ -z $TMUX ]; then
-		exec tmux
+		tmux
 	fi
 fi
 
