@@ -1,4 +1,5 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
+
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -173,8 +174,15 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 
 export EDITOR='vim'
 
+export THEME=~/dotfiles/repos/agnoster-bash/agnoster.bash
+if [[ -f $THEME ]]; then
+    export DEFAULT_USER=`whoami`
+    source $THEME
+fi
+
 if [ -t 0 ]; then
 	if [ -z $TMUX ]; then
 		exec tmux
 	fi
 fi
+

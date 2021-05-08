@@ -2,7 +2,15 @@ read -p "Install recomended software [Y/n] " -n 1 -r
 echo    # (optional) move to a new line 
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-	sudo apt install cmake make vim tmux
+	sudo apt install cmake make vim tmux 
+	mkdir repos
+  pushd repos	
+  git clone	https://github.com/powerline/fonts.git
+	pushd fonts
+	./install.sh
+	popd
+  git clone https://github.com/speedenator/agnoster-bash.git
+	popd
 fi
 
 cp .bashrc ~
