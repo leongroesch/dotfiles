@@ -6,7 +6,12 @@ then
 fi
 
 #import gnome terminal profile
-dconf load /org/gnome/terminal/legacy/profiles:/ < gnome-terminal-profiles.dconf
+read -p "Load gnome-erminal profiles (Only Hostcomputer) [Y/n] " -n 1 -r
+echo    # (optional) move to a new line 
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+	dconf load /org/gnome/terminal/legacy/profiles:/ < gnome-terminal-profiles.dconf
+fi
 
 cp .bashrc ~
 cp .tmux.conf ~
