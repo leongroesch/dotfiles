@@ -2,7 +2,7 @@ read -p "Install recomended software [Y/n] " -n 1 -r
 echo    # (optional) move to a new line 
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-	sudo apt install cmake make vim tmux dconf-cli
+	sudo apt install cmake make vim tmux dconf-cli bat
 fi
 
 #import gnome terminal profile
@@ -23,4 +23,5 @@ then
 	echo "source $(pwd)/scripts/$(hostname)_specific.sh" >> ~/.bashrc
 fi
 
+source ~/.bashrc
 

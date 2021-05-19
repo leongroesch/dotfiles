@@ -121,6 +121,9 @@ alias pod='popd'
 
 #tmux
 alias tmux='tmux -2'
+
+alias bat='batcat'
+
 #Make dir and change into it
 function mkcd()
 {
